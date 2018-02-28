@@ -1,0 +1,47 @@
+body{
+    background-image: url("https://image.freepik.com/free-vector/spot-light-background_1284-4685.jpg");
+    background-repeat: no-repeat;
+    background-size:100%;
+}
+
+div.container{
+    display:inline-block;
+    text-align:center;
+}
+
+div.people{
+    display:inline-block;
+    text-align:center;
+}
+
+div#people-view{
+    margin-top:100px;
+    display:inline-block;
+    text-align:center;
+    margin-bottom:20px;
+} 
+
+.gif{
+    margin-top:20px;
+    width:50%;
+}
+
+h1{
+    color:lightgreen;
+    margin-top:30px;
+    margin-bottom:10px;
+    font-size:24px;
+    font-weight:bold;
+}
+
+div#buttons-view{
+    margin-bottom:10px;
+}
+
+input#add-people{
+    margin-top:10px;
+}
+
+label{
+    color:lightgreen;
+}
