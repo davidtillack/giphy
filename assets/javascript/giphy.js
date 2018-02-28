@@ -16,7 +16,7 @@ function displayPersonGif(){
         $("#people-view").empty();
     
         for (var i = 0; i < response.data.length; i++){
-            // // Creating a div to hold the movie
+            // // Creating a div to hold the person
             var personDiv = $("<div class=people>");
 
             // Storing the rating data
@@ -48,6 +48,8 @@ function displayPersonGif(){
             personDiv.append(grabRating);
             $("#people-view").prepend(personDiv);
 
+            };
+
             // When image is clicked on, run between the still and animated 
             $(".gif").on("click",function(){
         
@@ -62,24 +64,21 @@ function displayPersonGif(){
                     $(this).attr("src", imgURL);
                     $(this).attr("data-state", "still");
                 } 
-        
-            });
-            
-        };
+            });   
       });
     };
 
     // Function for displaying movie data
     function renderButtons() {
 
-      // Deleting the movies prior to adding new movies
+      // Deleting the people prior to adding new people
       // (this is necessary otherwise you will have repeat buttons)
       $("#buttons-view").empty();
 
-      // Looping through the array of movies
+      // Looping through the array of people
       for (var i = 0; i < personArray.length; i++) {
 
-        // Then dynamicaly generating buttons for each movie in the array
+        // Then dynamicaly generating buttons for each person in the array
         // This code $("<button>") is all jQuery needs to create the beginning and end tag. (<button></button>)
         var a = $("<button>");
         // Adding a class of person-btn to our button
@@ -93,19 +92,17 @@ function displayPersonGif(){
       }
     }
 
-    // This function handles events where a movie button is clicked
+    // This function handles events where a person button is clicked
     $("#add-people").on("click", function(event) {
     event.preventDefault();
-
-      // empty movie-input box text upon adding a new button
 
       // This line grabs the input from the textbox
       var person = $("#person-input").val().trim();
 
-      // Adding movie from the textbox to our array
+      // Adding person from the textbox to our array
       personArray.push(person);
 
-      // Calling renderButtons which handles the processing of our movie array
+      // Calling renderButtons which handles the processing of our person array
       renderButtons();
     });
 
