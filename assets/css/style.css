@@ -1,10 +1,17 @@
+html{
+    display:inline-block;
+    text-align:center;
+}
+
 body{
     background-image: url("https://image.freepik.com/free-vector/spot-light-background_1284-4685.jpg");
     background-repeat: no-repeat;
     background-size:100%;
+    display:inline-block;
+    text-align:center;
 }
 
-div.container{
+div.container-fluid{
     display:inline-block;
     text-align:center;
 }
