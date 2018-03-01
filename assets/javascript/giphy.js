@@ -47,14 +47,14 @@ function displayPersonGif(){
             personDiv.append(giphy);
             personDiv.append(grabRating);
             $("#people-view").prepend(personDiv);
-
             };
 
             // When image is clicked on, run between the still and animated 
             $(".gif").on("click",function(){
         
-                var state = $(this).attr("data-state");
+            var state = $(this).attr("data-state");
         
+            // Set conditions for still versus animated
                 if (state === "still"){
                 var animateGif = $(this).attr("data-animate")
                     $(this).attr("src", animateGif);
@@ -94,16 +94,22 @@ function displayPersonGif(){
 
     // This function handles events where a person button is clicked
     $("#add-people").on("click", function(event) {
-    event.preventDefault();
-
+      
+        event.preventDefault();
+      
+      var personInput = $("#person-input")
+        
       // This line grabs the input from the textbox
-      var person = $("#person-input").val().trim();
+      var person = personInput.val().trim();
 
       // Adding person from the textbox to our array
       personArray.push(person);
 
       // Calling renderButtons which handles the processing of our person array
       renderButtons();
+
+      // Clear user input
+      personInput.val('');
     });
 
     
